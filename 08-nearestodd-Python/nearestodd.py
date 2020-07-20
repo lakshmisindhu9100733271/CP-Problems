@@ -6,6 +6,17 @@
 
 
 def fun_nearestodd(n):
-	return 0
+	nu=int(n)
+	if nu%2==0:
+		s=nu-1
+		b=nu+1
+		if n-s<b-n:
+			return s
+		elif n-s>b-n:
+			return b
+		elif n-s==b-n:
+			return s
+	else:
+		return nu
 
 
