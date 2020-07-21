@@ -11,7 +11,21 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	s=""
+	for i in range (len(msg)):
+		letter=msg[i]
+		if letter==' ':
+			s+=' '
+			pass
+		elif(letter.islower()):
+			s+=str(chr((ord(letter)+shift-97)%26+97))
+		else:
+			s+=str(chr((ord(letter)+shift-65)%26+65))
+	return s
+
+
+
+
 
 
 
