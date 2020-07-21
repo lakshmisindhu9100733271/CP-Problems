@@ -4,6 +4,12 @@
 # "XYZ" and "YXZ" then return false.
 
 
-def isrotated(str1, str2):
+def isrotated(w1, w2):
 	#Your code goes here
+	for i in range(len(w1)):
+		if(w1[i:]+w1[:i]==w2) or (w2[i:]+w2[:i]==w1):
+			return True
+	if w1[::-1]==w2:
+		return True
+	return False
 	pass
