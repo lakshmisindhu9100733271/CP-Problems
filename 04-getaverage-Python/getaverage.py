@@ -9,6 +9,20 @@
 
 
 
-def fun_getaverage(s): 
-	return 0.0
+def fun_getaverage(s):
+	s=s.split(',')
+	li=[]
+	for i in s :
+		try:
+			if float(i)>=0:
+				li.append(float(i))
+		except:
+			m=0
+	if len(li)==0:
+		return 0.0
+	else:
+		return (sum(li)/len(li))
+
+
+	
 
