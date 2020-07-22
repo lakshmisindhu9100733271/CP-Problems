@@ -5,7 +5,20 @@
 
 
 
-def fun_alternatingsum(a): 
-	return 0
+def fun_alternatingsum(l):
+	if (len(l)==0):
+		return 0
+	else:
+		po=0
+		ne=0
+		for i in range (len(l)):
+			if i%2==0:
+				po+=l[i]
+			else:
+				ne+=l[i]
+		return (po-ne)
+
+
+
 
 
