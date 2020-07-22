@@ -9,6 +9,19 @@
 # that copy and return it. Instead, you must directly construct the result here.
 
 
-def shortenlongruns(L, k):
+def shortenlongruns(L, K):
 	# Your code goes here
+	c=1
+	li=[]
+	for i in range (len(L)-1):
+		if L[i]==L[i+1]:
+			c+=1
+		else:
+			c=1
+		if c<K:
+			li.append(L[i])
+	if L[-1]!=L[-2]:
+		li.append(L[-1])
+	return li
+
 	pass
