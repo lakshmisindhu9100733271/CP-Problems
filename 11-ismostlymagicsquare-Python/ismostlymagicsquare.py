@@ -12,7 +12,13 @@
 # [ [ 1, 2],
 #   [ 2, 1]]
 # Each row and each column add to 3, but one diagonal adds to 2 and the other to 4.
-
+import numpy as np
 def ismostlymagicsquare(a):
 	# Your code goes here
+	ar=np.matrix(a)
+	a1=ar.sum(axis=1)
+	a2=ar.sum(axis=0)
+	a3=np.trace(ar)
+	return np.ravel(a1)[0]==a3 and np.ravel(a2)[0]==a3
+
 	pass
