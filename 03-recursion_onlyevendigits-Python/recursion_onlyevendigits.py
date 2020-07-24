@@ -9,4 +9,24 @@
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
 def fun_recursion_onlyevendigits(l): 
-		return []
+	return even(l,[],0)
+
+
+def even(l,a,i):
+	if i==len(l):
+		return a
+	else:
+		li=list(str(l[i]))
+		li=list(map(int,li))
+		li1=[]
+		for j in li:
+			if j%2==0:
+				li1.append(j)
+		li1=list(map(str,li1))
+		li1=''.join(li1)
+		if len(li1)==0:
+			a.append(0)
+		elif int(li1)%2==0:
+			a.append(int(li1))
+		i+=1
+		return even(l,a,i)
