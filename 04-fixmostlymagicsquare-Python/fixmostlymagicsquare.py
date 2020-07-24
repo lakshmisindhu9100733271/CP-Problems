@@ -8,4 +8,24 @@
 
 def fixmostlymagicsquare(L):
 	pass
-	# Your code goes here
+    # Your code goes here
+	r1=r2=r3=c1=c2=c3=0
+	for i in range (len(L)):
+		if i==0:
+			r1=sum(L[i])
+		if i==1:
+			r2=sum(L[i])
+		if i==2:
+			r3=sum(L[i])
+	for i in range(len(L[0])):
+		if i==0:
+			c1=L[0][0]+L[0][1]+L[0][2]
+		if i==1:
+			c2=L[1][0]+L[1][1]+L[1][2]
+		if i==2:
+			c3=L[2][0]+L[2][1]+L[2][2]
+	if r1==r2 and r1!=r3:
+		if c1==c2 and c1!=c3:
+			a=r1-r3
+			L[2][2]
+				
