@@ -8,6 +8,34 @@
 
 
 import math
+def zero(n):
+    n=str(n)
+    c=0
+    for i in n[::-1]:
+        if i=='0':
+            c+=1
+        else:
+            break
+    return int(n[:len(n)-c])
+
+def kap(i):
+    n=str(i**2)
+    if len(n)>1:
+        if i==(int(n[:len(n)//2])+int(n[len(n)//2:])):
+            return True
+        else:
+            m=zero(n[:len(n)//2])
+            if int(m)+int(n[len(n)//2:])==i:
+                return True
+    return False                        
 
 def fun_nth_kaprekarnumber(n):
-    return 1;
+    if n==0:
+        return 1
+    i=9
+    c=0
+    while(c<n):
+        if kap(i):
+            c+=1
+        i+=1
+    return i-1
