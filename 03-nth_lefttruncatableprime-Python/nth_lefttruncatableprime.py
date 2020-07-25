@@ -9,6 +9,36 @@
 
 
 import math
+def prime(n):
+    if n<=1:
+        return False
+    if n<=3:
+        return True
+    if (n%2==0 or n%3==0):
+        return False
+    i=5
+    while (i*i<=n):
+        if (n%i==0 or n%(i+2)==0):
+            return False
+        i=i+6
+    return True
+
+def tprime(i):
+     if '0' in str(i):
+         return False
+     while len(str(i))>1:
+         i=int(str(i)[1:])
+         if prime(i)==False:
+             return False
+     return True         
+
+
 
 def fun_nth_lefttruncatableprime(n):
-    return 1
+    i=2
+    while (n>=0):
+        if len(str(i))>=1 and tprime(i) and prime(i):
+            n-=1
+        i+=1
+
+    return i-1
