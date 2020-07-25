@@ -4,7 +4,22 @@
 # fun_carrylessadd(x, y) that takes two non-negative integers x and y and returns their 
 # carryless sum. As the paper demonstrates, fun_carrylessadd(785, 376) returns 51.
 
-
 def fun_carrylessadd(x, y):
-	return 0
+	if x==0:
+		return y
+	elif y==0:
+		return x
+	elif len(str(x))==1 and len(str(y))==1:
+		return x+y
+	else:
+		a=x+y
+		if a%10!=0:
+			l=len(str(x))-1
+			a=str(a)[-l:]
+			return (int(a)-10)
+		elif len(str(x))!=len(str(y)):
+			return a-10
+		else:
+			return 0
+
 
