@@ -5,6 +5,3 @@
 # case-sensitive, so "ABC" and "abc" do not contain the same characters. The function returns False if either 
 # parameter is not a string, but returns True if both strings are empty (why?).
 
-def samechars(s1, s2):
-	# Your code goes here
-	pass
