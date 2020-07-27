@@ -9,4 +9,19 @@
 
 def longestcommonsubstring(s1, s2):
     # Yourcode goes here
+    i=0
+    a=s1
+    li=[]
+    while i<=len(a):
+        j=0
+        while (i+j<=len(a)):
+            if len(a[i:i+j])>0:
+                li.append(a[i:i+j])
+            j+=1
+        i+=1
+    l2=sorted(li,key=len)
+    for i in l2[::-1]:
+        if i in s2:
+            return i
+    return ''                    
     pass
